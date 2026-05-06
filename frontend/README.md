@@ -1,16 +1,51 @@
-# React + Vite
+# PromptBridge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+PromptBridge is a simple AI prompt application built with **React + Vite + Material UI** on the frontend and a **Python FastAPI** backend that connects securely to the OpenAI API.
 
-Currently, two official plugins are available:
+The OpenAI API key stays in the backend, so it is never exposed in the browser.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+### Frontend
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- Material UI
+- JavaScript
 
-## Expanding the ESLint configuration
+### Backend
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Python
+- FastAPI
+- OpenAI Python SDK
+- python-dotenv
+- pytest
+
+## Project Structure
+
+```text
+Jarvis/
+├── backend/
+│   ├── .env
+│   ├── requirements.txt
+│   ├── pyproject.toml
+│   ├── src/
+│   │   ├── __init__.py
+│   │   ├── main.py
+│   │   └── openai_connector.py
+│   └── tests/
+│       ├── __init__.py
+│       ├── test_openai_connector.py
+│       └── test_openai_connector_integration.py
+│
+├── frontend/
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── index.html
+│   └── src/
+│       ├── App.jsx
+│       ├── App.css
+│       └── main.jsx
+│
+├── .gitignore
+└── README.md

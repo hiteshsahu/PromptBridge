@@ -13,7 +13,7 @@ import {
     TextField,
     Typography,
 } from "@mui/material";
-import SmartToyIcon from "@mui/icons-material/SmartToy";
+import SmartToyIcon from "@mui/icons-material/RadarOutlined";
 
 function App() {
     const [prompt, setPrompt] = useState("");

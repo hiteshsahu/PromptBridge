@@ -47,9 +47,13 @@ python3 -m pip install --upgrade build
 
 ```bash
 cd backend
+
+python -m venv .venv
+source .venv/bin/activate
+
 ```
 
-🔑 Add [OpenAI API key](https://platform.openai.com/settings/organization/api-keys) to `.env` file as environment variables
+🔑 Add [OpenAI API key](https://platform.openai.com/settings/organization/api-keys) to `backend/.env` file as environment variables
 
 ### 🪢 Dependencies
 
@@ -103,6 +107,10 @@ uvicorn backend.src.server:app --reload --port 8000
 
 ```
 
+Backend will start at [http://localhost:8000](http://localhost:8000) and will be ready to accept API requests from the frontend.
+
+API docs will be available at: [http://localhost:8000/docs](http://localhost:8000/docs)
+
 ## ▶️ Start Frontend
 
 Install dependencies before starting the frontend server:
@@ -117,6 +125,9 @@ Finally, run the application:
 ```bash
 npm run dev 
 ```
+
+
+Frontend will run at: [http://localhost:5173](http://localhost:5173) and will be ready to interact with the backend API.
 
 ----
 
