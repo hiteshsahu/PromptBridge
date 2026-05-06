@@ -2,7 +2,7 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from backend.src.openai_connector import OpenAIConnector, MODELS
+from backend.src.inference.openai_connector import OpenAIConnector, MODELS
 
 
 def test_should_raise_error_when_api_key_is_missing(monkeypatch):

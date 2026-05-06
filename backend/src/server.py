@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from backend.src.openai_connector import OpenAIConnector, MODELS
+from backend.src.inference.openai_connector import OpenAIConnector, MODELS
 
 app = FastAPI()
 

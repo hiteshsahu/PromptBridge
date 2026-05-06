@@ -58,7 +58,7 @@ function App() {
                 <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 3 }}>
                     <SmartToyIcon fontSize="large" />
                     <Typography variant="h4" component="h1" fontWeight="bold">
-                        PromptBridge
+                        Prompt<b>Bridge</b>
                     </Typography>
                 </Box>
 
@@ -70,7 +70,7 @@ function App() {
                                 value={model}
                                 label="Model"
                                 onChange={(event) => setModel(event.target.value)}
-                            >
+                                 variant={"outlined"}>
                                 <MenuItem value="GPT_4O_MINI">GPT 4o Mini</MenuItem>
                                 <MenuItem value="CHATGPT_3_5">ChatGPT 3.5</MenuItem>
                             </Select>

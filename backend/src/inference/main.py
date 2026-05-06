@@ -1,6 +1,6 @@
 from openai import RateLimitError
 
-from backend.src.openai_connector import OpenAIConnector, MODELS
+from backend.src.inference.openai_connector import OpenAIConnector, MODELS
 
 prompt = """
 Classify the following review 

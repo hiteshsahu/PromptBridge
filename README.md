@@ -13,8 +13,6 @@ graph TD
     B -->|Displays Responses to| A
 ```
 
-
-
 ---
 
 ## ⚛️ FRONTEND
@@ -51,7 +49,6 @@ python3 -m pip install --upgrade build
 cd backend
 ```
 
-
 🔑 Add [OpenAI API key](https://platform.openai.com/settings/organization/api-keys) to `.env` file as environment variables
 
 ### 🪢 Dependencies
@@ -69,10 +66,10 @@ python -m pip freeze > requirements.txt
 
 ```
 
-FInally, run the application:
+Finally, run the application:
 
 ```bash
-python -m backend.src.main
+python -m backend.src.inference.main
 ```
 
 ----
@@ -97,7 +94,6 @@ python -m backend.src.main
 
 ```
 
-
 ----
 
 ## ▶️ Start Backend
@@ -109,9 +105,16 @@ uvicorn backend.src.server:app --reload --port 8000
 
 ## ▶️ Start Frontend
 
+Install dependencies before starting the frontend server:
+
 ```bash
 cd frontend
 npm install
+```
+
+Finally, run the application:
+
+```bash
 npm run dev 
 ```
 
