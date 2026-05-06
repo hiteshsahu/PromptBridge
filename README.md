@@ -2,8 +2,25 @@
 
 > Open AI Python general purpose assistant
 
+```mermaid
 
-## ⚙️  Installation'
+graph TD
+    A[User] -->|Interacts with| B[Frontend]
+    B -->|Sends API Requests to| C[Backend]
+    C -->| Processes Requests using AI Models | D[AI Models]
+    D -->|Returns Responses to| C
+    C -->|Sends Responses back to| B
+    B -->|Displays Responses to| A
+```
+
+## Python AI Backend
+> lived under [/backend](./backend) folder
+
+```bash
+cd backend
+```
+
+## ⚙️ Installation
 - Install [Python 3.10+](https://www.python.org/downloads/)
 - Install [pip](https://pip.pypa.io/en/stable/installation/)
 
@@ -35,7 +52,7 @@ python -m pip freeze > requirements.txt
 Run the application:
 
 ```bash
-python -m src.main
+python -m backend.src.main
 ```
 
 ----
@@ -59,4 +76,36 @@ python -m src.main
   python -m pytest -m "integration"
 
 ```
+
+## Start Backend
+
+```bash
+uvicorn backend.src.server:app --reload --port 8000
+
+```
+
+---
+
+## FRONTEND
+
+Use existing UI or create your own to interact with the backend API.
+
+```bash
+npm create vite@latest frontend -- --template react
+
+# install MUI or any other UI library you prefer
+npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
+
+```
+
+## Start Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev 
+```
+
+----
+
 

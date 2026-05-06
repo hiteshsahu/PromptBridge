@@ -3,7 +3,7 @@ import os
 import pytest
 from openai import RateLimitError
 
-from src.openai_connector import OpenAIConnector, MODELS
+from backend.src.openai_connector import OpenAIConnector, MODELS
 
 
 @pytest.mark.integration
