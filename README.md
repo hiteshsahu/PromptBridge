@@ -5,20 +5,35 @@
 ```mermaid
 
 graph TD
-    A[User] -->|Interacts with| B[Frontend]
-    B -->|Sends API Requests to| C[Backend]
-    C -->| Processes Requests using AI Models | D[AI Models]
+    A[User 👤] -->|Interacts with| B[Frontend ⚛️]
+    B -->|Sends API Requests to| C[Backend 📟]
+    C -->| Processes Requests using AI Models | D[AI Models 🤖]
     D -->|Returns Responses to| C
     C -->|Sends Responses back to| B
     B -->|Displays Responses to| A
 ```
 
-## Python AI Backend
-> lived under [/backend](./backend) folder
+
+
+---
+
+## ⚛️ FRONTEND
+> lives under [/frontend](./frontend) folder
+
+Use existing UI or create your own to interact with the backend API.
 
 ```bash
-cd backend
+npm create vite@latest frontend -- --template react
+
+# install MUI or any other UI library you prefer
+npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
+
 ```
+
+---
+
+## 📟 Python AI Backend
+> lives under [/backend](./backend) folder
 
 ## ⚙️ Installation
 - Install [Python 3.10+](https://www.python.org/downloads/)
@@ -30,11 +45,16 @@ python3 -m pip install --upgrade build
 
 ```
 
-## ▶️ Developer Setup
+## 👨🏻‍💻 Developer Setup
+
+```bash
+cd backend
+```
+
 
 🔑 Add [OpenAI API key](https://platform.openai.com/settings/organization/api-keys) to `.env` file as environment variables
 
-### Dependencies
+### 🪢 Dependencies
 
 Install dependencies from `requirements.txt`:
 
@@ -49,7 +69,7 @@ python -m pip freeze > requirements.txt
 
 ```
 
-Run the application:
+FInally, run the application:
 
 ```bash
 python -m backend.src.main
@@ -57,7 +77,7 @@ python -m backend.src.main
 
 ----
 
-## 🧪 Run Tests
+## 🧪 Run Backend Tests
 
 ```bash
   # Run Tests
@@ -77,28 +97,17 @@ python -m backend.src.main
 
 ```
 
-## Start Backend
+
+----
+
+## ▶️ Start Backend
 
 ```bash
 uvicorn backend.src.server:app --reload --port 8000
 
 ```
 
----
-
-## FRONTEND
-
-Use existing UI or create your own to interact with the backend API.
-
-```bash
-npm create vite@latest frontend -- --template react
-
-# install MUI or any other UI library you prefer
-npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
-
-```
-
-## Start Frontend
+## ▶️ Start Frontend
 
 ```bash
 cd frontend
