@@ -1,13 +1,16 @@
 # PromptBridge ⛩️
 
-> Open AI Python general purpose assistant
+> Open AI Python general purpose assistant using Python & React
+
+
+![Prompt Bridge Demo](./demo.png)
 
 ```mermaid
 
 graph TD
-    A[User 👤] -->|Interacts with| B[Frontend ⚛️]
-    B -->|Sends API Requests to| C[Backend 📟]
-    C -->| Processes Requests using AI Models | D[AI Models 🤖]
+    A["User 👤"] -->|Interacts with| B["Frontend ⚛️"]
+    B -->|Sends API Requests to| C["Backend 📟"]
+    C -->| Processes Requests using AI Models | D["AI Models 🤖"]
     D -->|Returns Responses to| C
     C -->|Sends Responses back to| B
     B -->|Displays Responses to| A
@@ -27,7 +30,6 @@ npm create vite@latest frontend -- --template react
 npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
 
 ```
-
 ---
 
 ## 📟 Python AI Backend
@@ -48,7 +50,7 @@ python3 -m pip install --upgrade build
 ```bash
 cd backend
 
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 
 ```
@@ -68,12 +70,6 @@ Don’t forget to freeze the new dependencies if you add any:
 ```bash
 python -m pip freeze > requirements.txt
 
-```
-
-Finally, run the application:
-
-```bash
-python -m backend.src.inference.main
 ```
 
 ----
